@@ -18,7 +18,7 @@ export const Features = () => {
             exceptional customer service that exceeds expectations
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="">
             <Image
               src={ects}
