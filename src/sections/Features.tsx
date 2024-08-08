@@ -10,13 +10,7 @@ import Link from "next/link";
 export const Features = () => {
   return (
     <section className="bg-gradient-to-b from-[#D2DCFF] to-[#fff]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 5 }}
-        // viewport={{ once: true }}
-        className="container"
-      >
+      <div className="container">
         <div className="section-heading mb-24">
           <div className="flex justify-center">
             <div className="tag">Features</div>
@@ -89,7 +83,7 @@ export const Features = () => {
             Explore Additional Features
           </Link>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

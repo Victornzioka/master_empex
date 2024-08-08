@@ -16,7 +16,7 @@ const Services = () => {
             needs, from freight forwarding to warehousing and distribution
           </p>
         </div>
-        <div className="flex gap-4 mb-6">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="">
             <Image
               src={ects}
@@ -63,7 +63,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="">
             <Image
               src={ects}
