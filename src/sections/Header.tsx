@@ -1,9 +1,12 @@
+"use client";
+
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png";
-import MenuIcon from "@/assets/menu.svg";
 
 import Image from "next/image";
 import Link from "next/link";
+
+import Navbar, { links } from "@/components/Navbar";
 
 export const Header = () => {
   return (
@@ -23,13 +26,16 @@ export const Header = () => {
             <Link href="/">
               <Image src={Logo} alt="logo" height={40} width={40} />
             </Link>
-            <MenuIcon className="h-5 w-5 md:hidden" />
+
+            <Navbar />
+
+            {/* ------------------------navigation links----------------------------- */}
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="/about">About</a>
-              <a href="/features">Features</a>
-              <a href="/services">Services</a>
-              <a href="/contact">Contact</a>
-              {/* <a href="#">Help</a> */}
+              {links.map((link) => (
+                <Link href={link.url} key={link.title}>
+                  {link.title}
+                </Link>
+              ))}
               <button className="bg-[#293a8c] text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
                 Book a call
               </button>
