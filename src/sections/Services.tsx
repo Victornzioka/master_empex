@@ -1,6 +1,7 @@
 import ects from "@/assets/ects.png";
 import temperature_truck from "@/assets/temperature-controlled-trucks.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Services = () => {
   return (
@@ -11,7 +12,7 @@ export const Services = () => {
             <div className="tag">Services</div>
           </div>
           <h2 className="section-title mt-5">We do things differently....</h2>
-          <p className="section-description mt-5">
+          <p className="section-description italic text-black/40 mt-5">
             Comprehensive logistics solutions tailored to meet your unique
             needs, from freight forwarding to warehousing and distribution
           </p>
@@ -24,7 +25,7 @@ export const Services = () => {
               className="bg-white p-4 h-[250px]"
             />
             <div>
-              <h1 className="font-bold mb-3 mt-3">
+              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
                 Electronic Cargo Tracking System
               </h1>
               <p className="text-black/70 mb-6">
@@ -41,7 +42,7 @@ export const Services = () => {
               className="bg-white p-4 h-[250px]"
             />
             <div>
-              <h1 className="font-bold mb-3 mt-3">
+              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
                 Temperature Controlled Trucks
               </h1>
               <p className="text-black/70 mb-6">
@@ -57,7 +58,7 @@ export const Services = () => {
               className="bg-white p-4 h-[250px]"
             />
             <div>
-              <h1 className="font-bold mb-3 mt-3">
+              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
                 Remote Areas Fleet Communication
               </h1>
               <p className="text-black/70 mb-6">
@@ -66,6 +67,15 @@ export const Services = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="flex items-center justify-center pb-10">
+          <Link
+            href="/services"
+            className="bg-[#293a8c]/70 text-[#fff] p-4 rounded-lg"
+          >
+            Explore Additional Services
+          </Link>
         </div>
       </div>
     </section>

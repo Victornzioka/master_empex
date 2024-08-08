@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <section className="bg-gradient-to-b from-[#D2DCFF] to-[#fff]">
+    <div className="bg-gradient-to-b from-[#D2DCFF] to-[#fff]">
       <div className="container">
         <div className="section-heading mb-24">
           <div className="flex justify-center">
@@ -16,7 +16,7 @@ const Services = () => {
             needs, from freight forwarding to warehousing and distribution
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mb-6">
           <div className="">
             <Image
               src={ects}
@@ -24,9 +24,7 @@ const Services = () => {
               className="bg-white p-4 h-[250px]"
             />
             <div>
-              <h1 className="font-bold mb-3 mt-3">
-                Electronic Cargo Tracking System
-              </h1>
+              <h1 className="font-bold mb-3 mt-3">Cement Transportation</h1>
               <p className="text-black/70 mb-6">
                 This is a technology that enables real-time tracking of cargo
                 from the point of loading to the point of offloading. This
@@ -41,9 +39,7 @@ const Services = () => {
               className="bg-white p-4 h-[250px]"
             />
             <div>
-              <h1 className="font-bold mb-3 mt-3">
-                Temperature Controlled Trucks
-              </h1>
+              <h1 className="font-bold mb-3 mt-3">Bulk grain transportation</h1>
               <p className="text-black/70 mb-6">
                 This is a technology that enables real-time tracking of cargo
                 from the point of loading to the point of offloading
@@ -58,7 +54,7 @@ const Services = () => {
             />
             <div>
               <h1 className="font-bold mb-3 mt-3">
-                Remote Areas Fleet Communication
+                Construction Material transportation
               </h1>
               <p className="text-black/70 mb-6">
                 This is a technology that enables real-time tracking of cargo
@@ -67,8 +63,53 @@ const Services = () => {
             </div>
           </div>
         </div>
+        <div className="flex gap-4">
+          <div className="">
+            <Image
+              src={ects}
+              alt="tracking system"
+              className="bg-white p-4 h-[250px]"
+            />
+            <div>
+              <h1 className="font-bold mb-3 mt-3">Petroleum Transport</h1>
+              <p className="text-black/70 mb-6">
+                This is a technology that enables real-time tracking of cargo
+                from the point of loading to the point of offloading. This
+                ensures safety of cargo while in transit.
+              </p>
+            </div>
+          </div>
+          <div className="">
+            <Image
+              src={temperature_truck}
+              alt="tracking system"
+              className="bg-white p-4 h-[250px]"
+            />
+            <div>
+              <h1 className="font-bold mb-3 mt-3">Specialized Haulage</h1>
+              <p className="text-black/70 mb-6">
+                This is a technology that enables real-time tracking of cargo
+                from the point of loading to the point of offloading
+              </p>
+            </div>
+          </div>
+          <div className="">
+            <Image
+              src={ects}
+              alt="tracking system"
+              className="bg-white p-4 h-[250px]"
+            />
+            <div>
+              <h1 className="font-bold mb-3 mt-3">Equipment Leasing</h1>
+              <p className="text-black/70 mb-6">
+                This is a technology that enables real-time tracking of cargo
+                from the point of loading to the point of offloading
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
