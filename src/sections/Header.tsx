@@ -1,7 +1,7 @@
 "use client";
 
 import ArrowRight from "@/assets/arrow-right.svg";
-import Logo from "@/assets/logosaas.png";
+import Logo from "@/assets/logo.png";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -20,11 +20,11 @@ export const Header = () => {
           <ArrowRight className="h-4 w-4 inline-flex items-center justify-center" />
         </div>
       </div>
-      <div className="py-5">
+      <div className="py-5 bg-[#fff]">
         <div className="container">
           <div className="flex items-center justify-between">
             <Link href="/">
-              <Image src={Logo} alt="logo" height={40} width={40} />
+              <Image src={Logo} alt="logo" height={200} width={200} />
             </Link>
 
             <Navbar />
@@ -37,7 +37,7 @@ export const Header = () => {
                 </Link>
               ))}
               <button className="bg-[#293a8c] text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
-                Book a call
+                Book an Appointment
               </button>
             </nav>
           </div>

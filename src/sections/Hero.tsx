@@ -27,7 +27,9 @@ export const Hero = () => {
         <div className="max-w-[800px]">
           <h1 className="text-2xl md:text-5xl font-bold text-center text-[#293a8c] mt-16">
             STREAMLINE YOUR LOGISTICS OPERATIONS WITH{" "}
-            <span className="text-[#f09f21] font-bold">MASTER EMPEX</span>
+            <span className="text-[#f09f21] font-bold">
+              SUN & MOON VENTURES
+            </span>
           </h1>
         </div>
         <div className="mt-6 max-w-[450px]">

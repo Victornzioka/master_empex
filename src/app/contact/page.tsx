@@ -7,18 +7,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+254) 740 858585",
+    description: "(+254) 741 707783",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "sales@masterempex.com",
+    description: "sunmoonventure@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description:
-      "3RD Floor, Epic Business park, Links Road, Nyali Mombasa, Kenya.",
+    description: "Haile Selassie Avenue, Coffee Plaza Building, Nairobi Kenya",
   },
 ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import logo from "@/assets/logosaas.png";
+import logo from "@/assets/logo.png";
 import SocialX from "@/assets/social-x.svg";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedIn from "@/assets/social-linkedin.svg";
@@ -35,7 +35,7 @@ export const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">
-          &copy; 2024 Master Empex, Inc. All rights reserved.
+          &copy; 2024 Sun & Moon Ventures, Inc. All rights reserved.
         </p>
       </div>
     </footer>
