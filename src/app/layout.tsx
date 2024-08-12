@@ -9,7 +9,7 @@ import { Footer } from "@/sections/Footer";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Master Empex Logistics",
+  title: "Sun & Moon Ventures",
   description: "",
 };
 
