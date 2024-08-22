@@ -1,4 +1,5 @@
 import quotation_marks from "@/assets/quotation-marks.png";
+import MeetTheTeam from "@/components/MeetTheTeam";
 import Image from "next/image";
 
 const About = () => {
@@ -59,6 +60,7 @@ const About = () => {
             </p>
           </div>
         </div>
+        <MeetTheTeam />
       </div>
     </div>
   );

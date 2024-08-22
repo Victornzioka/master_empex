@@ -6,6 +6,9 @@ import echoLogo from "@/assets/logo-echo.png";
 import celestialLogo from "@/assets/logo-celestial.png";
 import pulseLogo from "@/assets/logo-pulse.png";
 import apexLogo from "@/assets/logo-apex.png";
+import kenafric from "@/assets/kenafric_logo.png";
+import kapa from "@/assets/Kapa-Logo.png";
+import chandaria from "@/assets/chandaria_logo.jpg";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -28,17 +31,17 @@ export const LogoTicker = () => {
             }}
           >
             <Image
-              src={acmeLogo}
+              src={kenafric}
               alt="acme logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
+              src={kapa}
               alt="quantum logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
+              src={chandaria}
               alt="echo logo"
               className="logo-ticker-image"
             />
@@ -60,17 +63,17 @@ export const LogoTicker = () => {
 
             {/* ------------second set of logos for animation------------------- */}
             <Image
-              src={acmeLogo}
+              src={kenafric}
               alt="acme logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
+              src={kapa}
               alt="quantum logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
+              src={chandaria}
               alt="echo logo"
               className="logo-ticker-image"
             />

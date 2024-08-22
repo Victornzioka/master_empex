@@ -1,6 +1,8 @@
 "use client";
 
+import ContactForm from "@/components/ContactForm";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const info = [
@@ -22,6 +24,14 @@ const info = [
 ];
 
 const Contact = () => {
+  const [visible, setVisible] = useState(false);
+
+  function handlePopUp() {
+    setVisible(!visible);
+  }
+
+  const handleOnClose = () => setVisible(false);
+
   return (
     <div className="bg-gradient-to-b from-[#D2DCFF] to-[#fff]">
       <div className="container">
@@ -67,11 +77,14 @@ const Contact = () => {
                 bottom: 200,
               }}
               className="bg-[#293a8c] text-white p-4 rounded-lg"
+              onClick={handlePopUp}
             >
               Lets Connect
             </motion.button>
           </div>
         </div>
+
+        <ContactForm onClose={handleOnClose} visible={visible} />
       </div>
     </div>
   );

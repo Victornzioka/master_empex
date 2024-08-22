@@ -6,14 +6,21 @@ import springImage from "@/assets/spring.png";
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import ContactForm from "@/components/ContactForm";
 
 export const CallToAction = () => {
+  const [seen, setSeen] = useState(false);
   const sectionRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
+
+  function handlePopUp() {
+    setSeen(!seen);
+  }
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
@@ -51,11 +58,15 @@ export const CallToAction = () => {
           />
         </div>
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn bg-[#293a8c] text-white gap-1">
+          <button
+            className="btn bg-[#293a8c] text-white gap-1"
+            onClick={handlePopUp}
+          >
             <span>Book an Appointment</span>
             <ArrowRight className="h-5 w-5" />
           </button>
         </div>
+        {seen && <ContactForm />}
       </div>
     </section>
   );
