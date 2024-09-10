@@ -10,7 +10,7 @@ import { useRef, useState } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export const CallToAction = () => {
-  const [seen, setSeen] = useState(false);
+  const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -19,8 +19,10 @@ export const CallToAction = () => {
   });
 
   function handlePopUp() {
-    setSeen(!seen);
+    setVisible(!visible);
   }
+
+  const handleOnClose = () => setVisible(false);
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
@@ -66,7 +68,7 @@ export const CallToAction = () => {
             <ArrowRight className="h-5 w-5" />
           </button>
         </div>
-        {seen && <ContactForm />}
+        {visible && <ContactForm onClose={handleOnClose} visible={visible} />}
       </div>
     </section>
   );

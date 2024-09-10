@@ -67,19 +67,19 @@ const Contact = () => {
             </ul>
           </div>
 
-          <div className="bg-white flex-1">
+          <div className="flex-1">
             <motion.button
               drag
               dragConstraints={{
-                top: -20,
+                top: -10,
                 left: 50,
-                right: 300,
-                bottom: 200,
+                right: 50,
+                bottom: 20,
               }}
               className="bg-[#293a8c] text-white p-4 rounded-lg"
               onClick={handlePopUp}
             >
-              Lets Connect
+              Send Us a Message
             </motion.button>
           </div>
         </div>

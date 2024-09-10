@@ -2,7 +2,19 @@ import quotation_marks from "@/assets/quotation-marks.png";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import Image from "next/image";
 
-const About = () => {
+import { client, urlFor } from "@/lib/client";
+
+export async function getAbout() {
+  const data = await client.fetch(`*[_type == "about"]`);
+
+  return {
+    data,
+  };
+}
+
+const About = async () => {
+  const res = await getAbout();
+
   return (
     <div className="bg-gradient-to-b from-[#D2DCFF] to-[#fff] overflow-x-clip">
       <div className="container">
@@ -39,25 +51,11 @@ const About = () => {
             <h1 className="text-[#f09f21] font-extrabold text-xl mb-4">
               OUR JOURNEY: DELIVERING EXCELLENCE IN LOGISTICS
             </h1>
-            <p className="text-black/40">
-              Master Empex Limited is a medium family run inland haulage &
-              logistics services provider based in Mombasa Kenya. We own and
-              operate, a fleet of 137 trucks and 35 flatbed low-loaders. Since
-              our inception in the year 2005 we have gained a wealth of good
-              experience and expertise in the provision of a wide range of
-              inland haulages services, for businesses of all sizes, in the
-              entire East and Central Africa region.
-            </p>
-            <br />
-            <p className="text-black/40">
-              Master Empex Limited is a medium family run inland haulage &
-              logistics services provider based in Mombasa Kenya. We own and
-              operate, a fleet of 137 trucks and 35 flatbed low-loaders. Since
-              our inception in the year 2005 we have gained a wealth of good
-              experience and expertise in the provision of a wide range of
-              inland haulages services, for businesses of all sizes, in the
-              entire East and Central Africa region
-            </p>
+            {res.data.map((aboutInfo) => (
+              <p key={aboutInfo._type} className="text-black/40">
+                {aboutInfo.about}
+              </p>
+            ))}
           </div>
         </div>
         <MeetTheTeam />

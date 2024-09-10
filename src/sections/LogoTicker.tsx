@@ -1,11 +1,5 @@
 "use client";
 
-import acmeLogo from "@/assets/logo-acme.png";
-import quantumLogo from "@/assets/logo-quantum.png";
-import echoLogo from "@/assets/logo-echo.png";
-import celestialLogo from "@/assets/logo-celestial.png";
-import pulseLogo from "@/assets/logo-pulse.png";
-import apexLogo from "@/assets/logo-apex.png";
 import kenafric from "@/assets/kenafric_logo.png";
 import kapa from "@/assets/Kapa-Logo.png";
 import chandaria from "@/assets/chandaria_logo.jpg";
@@ -46,17 +40,13 @@ export const LogoTicker = () => {
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
+              src={kenafric}
               alt="celestial logo"
               className="logo-ticker-image"
             />
+            <Image src={kapa} alt="pulse logo" className="logo-ticker-image" />
             <Image
-              src={pulseLogo}
-              alt="pulse logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={apexLogo}
+              src={chandaria}
               alt="apex logo"
               className="logo-ticker-image"
             />
@@ -78,17 +68,13 @@ export const LogoTicker = () => {
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
+              src={kenafric}
               alt="celestial logo"
               className="logo-ticker-image"
             />
+            <Image src={kapa} alt="pulse logo" className="logo-ticker-image" />
             <Image
-              src={pulseLogo}
-              alt="pulse logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={apexLogo}
+              src={chandaria}
               alt="apex logo"
               className="logo-ticker-image"
             />

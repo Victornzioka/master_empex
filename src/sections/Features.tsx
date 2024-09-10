@@ -1,13 +1,22 @@
-"use client";
-
 import ects from "@/assets/ects.png";
-import temperature_truck from "@/assets/temperature-controlled-trucks.png";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Features = () => {
+import { client, urlFor } from "@/lib/client";
+
+export async function getFeatures() {
+  const data = await client.fetch(`*[_type == "features"]`);
+
+  return {
+    data,
+  };
+}
+
+export const Features = async () => {
+  const res = await getFeatures();
+  const features = res.data.slice(0, 3);
+
   return (
     <section className="bg-gradient-to-b from-[#D2DCFF] to-[#fff]">
       <div className="container">
@@ -24,61 +33,23 @@ export const Features = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="">
-            <Image
-              src={ects}
-              alt="tracking system"
-              className="bg-white p-4 h-[250px]"
-            />
-            <div>
-              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
-                Electronic Cargo Tracking System
-              </h1>
-              <p className="text-black/70 mb-6">
-                This is a technology that enables real-time tracking of cargo
-                from the point of loading to the point of offloading. This
-                ensures safety of cargo while in transit.
-              </p>
+          {features.map((feature) => (
+            <div key={feature.title} className="">
+              <img src={urlFor(feature.image).height(250).url()} />
+              <div>
+                <h1 className="font-black text-[#293a8c] mb-3 mt-3">
+                  {feature.title}
+                </h1>
+                <p className="text-black/70 mb-6">{feature.description}</p>
+              </div>
             </div>
-          </div>
-          <div className="">
-            <Image
-              src={temperature_truck}
-              alt="tracking system"
-              className="bg-white p-4 h-[250px]"
-            />
-            <div>
-              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
-                Temperature Controlled Trucks
-              </h1>
-              <p className="text-black/70 mb-6">
-                This is a technology that enables real-time tracking of cargo
-                from the point of loading to the point of offloading
-              </p>
-            </div>
-          </div>
-          <div className="">
-            <Image
-              src={ects}
-              alt="tracking system"
-              className="bg-white p-4 h-[250px]"
-            />
-            <div>
-              <h1 className="font-black text-[#293a8c] mb-3 mt-3">
-                Remote Areas Fleet Communication
-              </h1>
-              <p className="text-black/70 mb-6">
-                This is a technology that enables real-time tracking of cargo
-                from the point of loading to the point of offloading
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="flex items-center justify-center pb-10">
           <Link
             href="/features"
-            className="bg-[#293a8c]/70 text-[#fff] p-4 rounded-lg"
+            className="bg-[#293a8c] text-[#fff] p-4 rounded-lg"
           >
             Explore Additional Features
           </Link>

@@ -3,6 +3,7 @@
 import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
 import ects from "@/assets/ects.png";
+import heroImg from "@/assets/hero-img.webp";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
 
@@ -38,8 +39,23 @@ export const Hero = () => {
             chain
           </p>
         </div>
-        <div className="mt-10 md:mt-20">
-          <motion.p
+      </div>
+      <div className="mt-10 md:mt-20 flex w-full h-full justify-center items-center">
+        {/* <p className="bg-[#f09f21] text-white font-bold rounded-md py-1 text-center">
+            Track your cargo while on transit, Be at peace!
+          </p> */}
+        <img
+          src={heroImg.src}
+          alt="tracking machine"
+          className="w-[90%] lg:w-[70%] h-[400px] lg:h-[600px] object-cover"
+        />
+      </div>
+    </section>
+  );
+};
+
+{
+  /* <motion.p
             className="bg-[#f09f21] text-white font-bold rounded-md py-1 text-center"
             animate={{
               translateY: [-30, 30],
@@ -66,9 +82,5 @@ export const Hero = () => {
               duration: 3,
               ease: "easeInOut",
             }}
-          />
-        </div>
-      </div>
-    </section>
-  );
-};
+          /> */
+}

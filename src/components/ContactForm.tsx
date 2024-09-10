@@ -13,9 +13,9 @@ const ContactForm = ({ visible, onClose }) => {
     <div
       id="formWrapper"
       onClick={handleOnClose}
-      className="fixed inset-0 bg-[#293a8c]/30 backdrop-blur-sm flex justify-center items-center"
+      className="fixed inset-0 bg-[#293a8c]/30 backdrop-blur-sm flex justify-center items-center top-12"
     >
-      <form className="flex flex-col gap-6 p-10 rounded-xl bg-[#293a8c] w-[800px] z-100">
+      <form className="flex flex-col gap-6 p-10 rounded-xl bg-[#293a8c] w-[800px] z-1000">
         <div className="flex justify-between">
           <h1 className="text-white text-3xl">Reach Out</h1>
           <button
