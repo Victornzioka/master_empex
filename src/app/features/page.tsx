@@ -26,7 +26,7 @@ const Features = async () => {
             exceptional customer service that exceeds expectations
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {res.data.map((feature) => (
             <div key={feature.title} className="">
               <img src={urlFor(feature.image).height(250).url()} />
