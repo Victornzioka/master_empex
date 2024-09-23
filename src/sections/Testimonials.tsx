@@ -12,55 +12,55 @@ const testimonials = [
     text: "Sunmoon ventures is the real deal. I have always recieved my goods in Rwanda in good time and the perfect condition, I recommend.",
     imageSrc: avatar.src,
     name: "Eric",
-    username: "@Rwanda",
+    username: "@Meerata Investments, Kigali",
   },
   {
     text: "Talk of professionalism and charisma. These guys are top notch. You need to try them out.",
     imageSrc: avatar.src,
-    name: "Kapa",
-    username: "@Kapa",
+    name: "African Global Logistics",
+    username: "@African Global Logistics",
   },
   {
     text: "Perfect partners, keeping their word always. Among the best partners to ever engage with. ",
     imageSrc: avatar.src,
-    name: "Kenafric",
-    username: "@Kenafric",
+    name: "Gorilla Logistics",
+    username: "@Gorilla Logistics",
   },
   {
     text: "Sunmoon ventures is the real deal. I have always recieved my goods in Rwanda in good time and the perfect condition, I recommend.",
     imageSrc: avatar.src,
     name: "Eric",
-    username: "@Rwanda",
+    username: "@Meerata Investments, Kigali",
   },
   {
     text: "Talk of professionalism and charisma. These guys are top notch. You need to try them out.",
     imageSrc: avatar.src,
-    name: "Kapa",
-    username: "@Kapa",
+    name: "African Global Logistics",
+    username: "@African Global Logistics",
   },
   {
     text: "Perfect partners, keeping their word always. Among the best partners to ever engage with. ",
     imageSrc: avatar.src,
-    name: "Kenafric",
-    username: "@Kenafric",
+    name: "Gorilla Logistics",
+    username: "@Gorilla Logistics",
   },
   {
     text: "Sunmoon ventures is the real deal. I have always recieved my goods in Rwanda in good time and the perfect condition, I recommend.",
     imageSrc: avatar.src,
     name: "Eric",
-    username: "@Rwanda",
+    username: "@Meerata Investments, Kigali",
   },
   {
     text: "Talk of professionalism and charisma. These guys are top notch. You need to try them out.",
     imageSrc: avatar.src,
-    name: "Kapa",
-    username: "@Kapa",
+    name: "African Global Logistics",
+    username: "@African Global Logistics",
   },
   {
     text: "Perfect partners, keeping their word always. Among the best partners to ever engage with. ",
     imageSrc: avatar.src,
-    name: "Kenafric",
-    username: "@Kenafric",
+    name: "Gorilla Logistics",
+    username: "@Gorilla Logistics",
   },
 ];
 
@@ -84,7 +84,7 @@ const TestimonialsColumn = (props: {
         ease: "linear",
         repeatType: "loop",
       }}
-      className="flex flex-col gap-6 pb-6"
+      className="flex flex-col gap-6 pb-6 "
     >
       {[...new Array(2)].fill(0).map((_, index) => (
         <React.Fragment key={index}>
